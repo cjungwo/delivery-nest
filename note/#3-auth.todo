@@ -1,0 +1,13 @@
+#3-auth:
+  ☐ All
+  ☐ Analysis Requirements(Statement, Goal ...)
+
+  ☐ Dev Strategy(Tests, Scenarios, Priorities)
+
+  ☐ Work List: @must @could @should @won't
+    ✔ create auth module @done(25-04-28 14:38)
+    ☐ add sign up
+    ☐ add sign in
+  ☐ Retrospect
+
+  ☐ Additions
