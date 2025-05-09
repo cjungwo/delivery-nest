@@ -2,8 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import * as Joi from 'joi';
-import { AuthModule } from './auth/auth.module';
-import { UserModule } from './user/user.module';
+import { ProductModule } from './product/product.module';
 
 @Module({
   imports: [
@@ -12,9 +11,6 @@ import { UserModule } from './user/user.module';
       validationSchema: Joi.object({
         HTTP_PORT: Joi.number().required(),
         DB_URL: Joi.string().required(),
-        HASH_SALT: Joi.number().required(),
-        REFRESH_TOKEN_SECRET: Joi.string().required(),
-        ACCESS_TOKEN_SECRET: Joi.string().required(),
       }),
     }),
     TypeOrmModule.forRootAsync({
@@ -26,8 +22,7 @@ import { UserModule } from './user/user.module';
       }),
       inject: [ConfigService],
     }),
-    UserModule,
-    AuthModule,
+    ProductModule,
   ],
 })
 export class AppModule {}
